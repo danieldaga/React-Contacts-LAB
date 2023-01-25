@@ -3,7 +3,7 @@ import './App.css'
 import ContactTable from './components/ContactTable/ContactTable';
 import contacts from "./contacts.json";
 
-const arrayContacts = contacts.splice(0, 5)
+// const arrayContacts = contacts.slice(0, 5)
 
 const App = () => {
 
@@ -11,7 +11,7 @@ const App = () => {
 
     return (
         <div>
-            <ContactTable contacts={arrayContacts}/>
+            <ContactTable propscontacts={contacts}/>
         </div>
     )
 }

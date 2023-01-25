@@ -1,21 +1,25 @@
 import { useState } from 'react'
 import './ContactTable.css'
-import contact from "../../contacts.json";
+// import contact from "../../contacts.json";
 const ContactTable = (props) => {
 
-    const {contacts} = props
-    // const [stateContacts, setStateContacts] = useState(contact)
-    // const firstFive = stateContacts.slice(0, 5)
-    // const addRandom = () => {
-    //     const randomIndex = Math.floor(Math.random() * stateContacts.length);
-    //     const randomContact = stateContacts[randomIndex];
-    //     firstFive.push(randomContact);
-    // };
+    const {propscontacts} = props
+
+    const [contacts, setStateContacts] = useState(propscontacts.slice(0,5))
+
+    const newRandomContact = () => {
+            const newContact =
+            propscontacts[Math.floor(Math.random() * propscontacts.length)];
+
+        if (!contacts.includes(newContact)) {
+            setStateContacts([newContact, ...contacts]);
+        }
+    };
 
 
     return(
         <div>
-            <button className='random-contact'>Add Random Contact</button>
+            <button onClick={newRandomContact} className='random-contact'>Add Random Contact</button>
             <button className='sort-populary'>Sort by populary</button>
             <button className=''>Sort by name</button>
 
