@@ -1,10 +1,15 @@
 import './App.css'
+import ContactTable from './components/ContactTable/ContactTable';
 import contacts from "./contacts.json";
 
-const contacts = contacts
+
+const arrayContacts = contacts.splice(0, 5)
+
 const App = () => {
 
-    return 
+    return (
+        <ContactTable contacts={arrayContacts}/>
+    )
 }
 
 export default App
