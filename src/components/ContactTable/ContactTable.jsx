@@ -13,6 +13,8 @@ const ContactTable = (props) => {
                 <th>Picture</th>
                 <th>Name</th>
                 <th>Popularity</th>
+                <th>Won Oscar</th>
+                <th>Won Emmy</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +26,16 @@ const ContactTable = (props) => {
                     </td>
                     <td>{contacts.name}</td>
                     <td>{contacts.popularity}</td>
+                        {
+                            contacts.wonOscar
+                            ? <td>🏆</td>
+                            : null
+                        }
+                        {
+                            contacts.wonEmmy
+                            ? <td>🏆</td>
+                            : null
+                        }
                     </tr>
                 );
                 })}
