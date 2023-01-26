@@ -38,10 +38,13 @@
 
 }
 th{
+}
+th{
     font-size: 1.125em;
     font-family: "Montserrat", sans-serif;
-    margin: 55px;
     text-align: center;
+    padding: 30px;
+
 }
 td{
     font-size: 1em;
