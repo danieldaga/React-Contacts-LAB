@@ -16,6 +16,14 @@ const ContactTable = (props) => {
         }
     };
 
+    const sortPopularity = () =>{
+        const sortPopularityContacts = contacts.sort((a,b)=>{
+            return b.popularity - a.popularity
+        })
+        setStateContacts(sortPopularityContacts)
+    }
+
+
     const deleteContacts = (contactsId) => {
         const filteredContacts = contacts.filter((contact) => {
             return contact.id !== contactsId
