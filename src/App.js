@@ -10,7 +10,7 @@ const App = () => {
 
 
     return (
-        <div>
+        <div className='main'>
             <ContactTable propscontacts={contacts}/>
         </div>
     )
