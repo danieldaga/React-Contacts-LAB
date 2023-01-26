@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './ContactTable.css'
-// import contact from "../../contacts.json";
 const ContactTable = (props) => {
 
     const {propscontacts} = props
