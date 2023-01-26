@@ -147,3 +147,7 @@ font-size: 1.125em;
     font-weight: bold;
 
 }
+.award{
+    font-size: 48px;    
+    text-shadow: 5px 5px #797070;
+}

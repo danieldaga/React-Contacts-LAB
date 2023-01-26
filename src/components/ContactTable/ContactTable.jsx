@@ -78,12 +78,12 @@ const ContactTable = (props) => {
                         <td>{generatePopularity(contacts.popularity.toFixed(2))}</td>
                             {
                                 contacts.wonOscar
-                                ? <td>🏆</td>
+                                ? <td className='award'>🏆</td>
                                 : <td></td>
                             }
                             {
                                 contacts.wonEmmy
-                                ? <td>🏆</td>
+                                ? <td className='award'>🏆</td>
                                 : <td></td>
                             }
                             <td><button onClick={() => deleteContacts(contacts.id)} className="btn-delete">
