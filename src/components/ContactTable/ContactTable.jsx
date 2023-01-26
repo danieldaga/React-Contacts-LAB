@@ -34,6 +34,18 @@ const ContactTable = (props) => {
         setStateContacts(filteredContacts)
     }
 
+    const generatePopularity= (score) => {
+        if (score > 15) {
+            return <span className="green">{score}</span>
+        }
+        else if(score < 10) {
+            return <span className="red">{score}</span>
+        }
+        else {
+            return <span className="black">{score}</span>
+        }
+    
+        }
 
     return(
         <div className='container'>
@@ -63,7 +75,7 @@ const ContactTable = (props) => {
                             <img src={contacts.pictureUrl} alt={contacts.name} className='image-contact'/>
                         </td>
                         <td>{contacts.name}</td>
-                        <td>{contacts.popularity}</td>
+                        <td>{generatePopularity(contacts.popularity.toFixed(2))}</td>
                             {
                                 contacts.wonOscar
                                 ? <td>🏆</td>

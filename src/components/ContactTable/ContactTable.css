@@ -127,3 +127,17 @@ font-size: 1.125em;
     text-align: center;
     opacity: 0.3;
 }
+.black{
+    color: #183153;
+    font-weight: bold;
+}
+.red{
+    color: red;
+    font-weight: bold;
+
+}
+.green{
+    color: green;
+    font-weight: bold;
+
+}
