@@ -18,7 +18,7 @@ const ContactTable = (props) => {
 
     const deleteContacts = (contactsId) => {
         const filteredContacts = contacts.filter((contact) => {
-            return contacts._id !== contactsId
+            return contact.id !== contactsId
         })
         setStateContacts(filteredContacts)
     }
@@ -53,14 +53,14 @@ const ContactTable = (props) => {
                             {
                                 contacts.wonOscar
                                 ? <td>🏆</td>
-                                : null
+                                : <td></td>
                             }
                             {
                                 contacts.wonEmmy
                                 ? <td>🏆</td>
-                                : null
+                                : <td></td>
                             }
-                            <td><button onClick={() => deleteContacts(contacts._id)} className="btn-delete">
+                            <td><button onClick={() => deleteContacts(contacts.id)} className="btn-delete">
                 Delete
             </button></td>
                         </tr>
