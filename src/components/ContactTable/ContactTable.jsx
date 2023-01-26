@@ -75,7 +75,7 @@ const ContactTable = (props) => {
                                 : <td></td>
                             }
                             <td><button onClick={() => deleteContacts(contacts.id)} className="btn-delete">
-               <span> Delete</span>
+                <span> Delete</span>
             </button></td>
                         </tr>
                     );
@@ -83,6 +83,8 @@ const ContactTable = (props) => {
                 </tbody>
             </table>
             </div>
+            <div className='copy'><p>Daniel García Rodríguez</p></div>
+
         </div>
     )
 }
