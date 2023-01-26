@@ -37,11 +37,14 @@ const ContactTable = (props) => {
 
 
     return(
-        <div>
-            <button onClick={newRandomContact} className='random-contact'>Add Random Contact</button>
-            <button onClick={()=>sortPopularity()} className='sort-populary'>Sort by populary</button>
-            <button onClick={()=>namePopularity()} className=''>Sort by name</button>
+        <div className='container'>
+            <div className='button-container'>
+            <button onClick={newRandomContact} className='buttons-up'><span>Add Random Contact</span></button>
+            <button onClick={()=>sortPopularity()} className='buttons-up'><span>Sort by populary</span></button>
+            <button onClick={()=>namePopularity()} className='buttons-up'><span>Sort by name</span></button>
+            </div>
 
+            <div className='table-container'>
             <table>
                 <thead>
                     <tr>
@@ -73,13 +76,14 @@ const ContactTable = (props) => {
                                 : <td></td>
                             }
                             <td><button onClick={() => deleteContacts(contacts.id)} className="btn-delete">
-                Delete
+               <span> Delete</span>
             </button></td>
                         </tr>
                     );
                     })}
                 </tbody>
             </table>
+            </div>
         </div>
     )
 }
