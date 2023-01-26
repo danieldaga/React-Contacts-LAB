@@ -17,12 +17,16 @@ const ContactTable = (props) => {
     };
 
     const sortPopularity = () =>{
-        const sortPopularityContacts = contacts.sort((a,b)=>{
+        const sortPopularityContacts =[...contacts].sort((a,b)=>{
             return b.popularity - a.popularity
         })
         setStateContacts(sortPopularityContacts)
     }
 
+    const namePopularity = () =>{
+        const namePopularityContacts = [...contacts].sort((a,b)=>a.name.localeCompare(b.name))
+        setStateContacts(namePopularityContacts)
+    }
 
     const deleteContacts = (contactsId) => {
         const filteredContacts = contacts.filter((contact) => {
@@ -35,8 +39,8 @@ const ContactTable = (props) => {
     return(
         <div>
             <button onClick={newRandomContact} className='random-contact'>Add Random Contact</button>
-            <button className='sort-populary'>Sort by populary</button>
-            <button className=''>Sort by name</button>
+            <button onClick={()=>sortPopularity()} className='sort-populary'>Sort by populary</button>
+            <button onClick={()=>namePopularity()} className=''>Sort by name</button>
 
             <table>
                 <thead>
